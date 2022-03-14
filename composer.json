@@ -1,0 +1,52 @@
+{
+  "name": "core-packages/file-uploader",
+  "description": "A file uploader",
+  "license": "MIT",
+  "keywords": [
+    "file",
+    "uploader"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "duclt3005",
+      "email": "duclt3005@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "guzzlehttp/guzzle": "^7.0",
+    "intervention/image": "^2.5"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "orchestra/testbench": "^4.0",
+    "phpunit/phpunit": "^8.5",
+    "symfony/test-pack": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Workable\\FileUploader\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Workable\\FileUploader\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Workable\\FileUploader\\FileUploaderServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
